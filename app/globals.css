@@ -4,7 +4,7 @@
 
 /* Custom styles */
 body {
-  background: url('/Background.svg') center fixed;
+  background-color: rgba(0, 0, 0, 0.951);
   background-size: cover;
   color: white;
 }
