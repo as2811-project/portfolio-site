@@ -11,7 +11,7 @@ export default function NavBar() {
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link href="#" aria-current="page">
+          <Link aria-current="page" href="/webprojects">
             Web
           </Link>
         </NavbarItem>
