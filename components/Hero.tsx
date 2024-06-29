@@ -1,27 +1,85 @@
+import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
 import { FlipWords } from "./flip-words";
 
+const DottedLineBackground = () => (
+  <svg
+    className="absolute inset-0 w-full h-full"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <pattern
+        id="dotted-pattern"
+        width="20"
+        height="20"
+        patternUnits="userSpaceOnUse"
+      >
+        <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.1)" />
+      </pattern>
+      <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="rgba(74, 222, 128, 0.2)" />
+        <stop offset="50%" stopColor="rgba(232, 121, 249, 0.2)" />
+        <stop offset="100%" stopColor="rgba(56, 189, 248, 0.2)" />
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#dotted-pattern)" />
+    <path
+      d="M0,50 Q400,300 800,100 T1600,200"
+      fill="none"
+      stroke="url(#line-gradient)"
+      strokeWidth="3"
+      strokeDasharray="5,5"
+    />
+  </svg>
+);
+
 const Hero: React.FC = () => {
   const text = ["Software", "Data", "Photography"];
+
   return (
-    <section className="flex flex-col justify-center h-screen ml-8 mb-2 p-8">
-      <h1 className="text-7xl font-light mb-5 text-left ml-5">
-        Hey, this is Anandh!
-      </h1>
-      <h2 className="text-3xl ml-3.5">
-        <FlipWords words={text} />
-      </h2>
-      <p className="ml-6 mt-5">
-        I'm an aspiring software (backend) and data engineer. <br></br> I
-        sometimes dabble in Photography as well!
-        <br></br>
-      </p>
-      <div className="ml-5 flex flex-grid mt-5">
-        <FaLinkedinIn className="mr-5 text-sky-500 text-2xl" />
-        <FiGithub className="mr-5 text-orange-500 text-2xl" />
-        <BiLogoGmail className="text-red-500 text-2xl" />
+    <section className="relative flex flex-col justify-center h-screen ml-8 mb-2 p-8 overflow-hidden">
+      <DottedLineBackground />
+      <div className="relative z-10 flex flex-row">
+        <div className="flex-grow">
+          <h1 className="text-8xl font-thin mb-5 text-left ml-5 tracking-tight">
+            <span className="font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.green.300),theme(colors.fuchsia.400),theme(colors.sky.500),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.green.100),theme(colors.green.300))] bg-[length:200%_auto] animate-gradient">
+              Anandh{" "}
+            </span>
+            Sellamuthu
+          </h1>
+          <h2 className="text-4xl ml-3.5">
+            <FlipWords words={text} />
+          </h2>
+          <p className="ml-6 mt-5">
+            An aspiring software (backend) and data engineer. <br />
+            A portrait photographer as well sometimes.
+            <br />
+          </p>
+          <div className="ml-5 flex flex-grid mt-5">
+            <FaLinkedinIn className="mr-5 text-sky-500 text-2xl" />
+            <FiGithub className="mr-5 text-orange-500 text-2xl" />
+            <BiLogoGmail className="text-red-500 text-2xl" />
+          </div>
+        </div>
+        <div className="relative w-1/3 mr-10 ml-10">
+          <img
+            src="/images/snippet1.png"
+            alt="Code Snippet 1"
+            className="code-snippet snippet1"
+          />
+          <img
+            src="/images/snippet2.png"
+            alt="Code Snippet 2"
+            className="code-snippet snippet2"
+          />
+          <img
+            src="/images/snippet3.png"
+            alt="Code Snippet 3"
+            className="code-snippet snippet3"
+          />
+        </div>
       </div>
     </section>
   );

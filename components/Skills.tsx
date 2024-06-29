@@ -1,70 +1,125 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import { motion, useAnimation, Variants } from "framer-motion";
 
 const languages = [
   { name: "Python", logo: "https://cdn.simpleicons.org/python" },
-  {
-    name: "JavaScript",
-    logo: "https://cdn.simpleicons.org/javascript",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.simpleicons.org/typeScript",
-  },
+  { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript" },
+  { name: "TypeScript", logo: "https://cdn.simpleicons.org/typeScript" },
   { name: "C#", logo: "https://cdn.simpleicons.org/csharp" },
 ];
 
 const frameworks = [
   { name: "React", logo: "https://cdn.simpleicons.org/react" },
-  { name: "Next.js", logo: "https://cdn.simpleicons.org/nextdotjs" },
   { name: "TailwindCSS", logo: "https://cdn.simpleicons.org/tailwindcss" },
   { name: ".NET", logo: "https://cdn.simpleicons.org/dotnet" },
   { name: "PySpark", logo: "https://cdn.simpleicons.org/apachespark" },
   { name: "Kafka", logo: "https://cdn.simpleicons.org/apachekafka" },
   { name: "AWS", logo: "https://cdn.simpleicons.org/amazonwebservices" },
   { name: "Supabase", logo: "https://cdn.simpleicons.org/supabase" },
+  { name: "Git", logo: "https://cdn.simpleicons.org/git" },
 ];
 
-const Skills: React.FC = () => {
-  return (
-    <section className="py-12">
-      <section className="flex flex-col justify-center h-screen ml-5 mb-5 p-8">
-        <h2 className="text-4xl font-light ml-5 px-5 mb-8">Languages I use</h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {languages.map((language) => (
-            <div
-              key={language.name}
-              className="rounded-lg p-6 flex flex-col items-center"
-            >
-              <img
-                src={language.logo}
-                alt={language.name}
-                className="w-16 h-16 mb-4"
-              />
-              <h3 className="text-xl font-light">{language.name}</h3>
-            </div>
-          ))}
-        </div>
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
-        <h2 className="text-4xl font-light ml-5 px-5 mb-8">
-          Tools and Frameworks I use
-        </h2>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {frameworks.map((framework) => (
-            <div
-              key={framework.name}
-              className="rounded-lg p-6 flex flex-col items-center"
-            >
-              <img
-                src={framework.logo}
-                alt={framework.name}
-                className="w-16 h-16 mb-4"
-              />
-              <h3 className="text-xl font-light">{framework.name}</h3>
-            </div>
-          ))}
+const itemVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 12,
+    },
+  },
+};
+
+const Skills: React.FC = () => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          controls.start("visible");
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [controls]);
+
+  return (
+    <section ref={ref} className="py-16 text-white">
+      <div className="container mx-auto px-4">
+        <div className="mb-16">
+          <h3 className="text-3xl font-medium mb-8">Languages</h3>
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            animate={controls}
+          >
+            {languages.map((lang) => (
+              <SkillCard key={lang.name} skill={lang} />
+            ))}
+          </motion.div>
         </div>
-      </section>
+        <div>
+          <h3 className="text-3xl font-medium mb-8">Tools & Frameworks</h3>
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            animate={controls}
+          >
+            {frameworks.map((framework) => (
+              <SkillCard key={framework.name} skill={framework} />
+            ))}
+          </motion.div>
+        </div>
+      </div>
     </section>
+  );
+};
+
+interface SkillCardProps {
+  skill: { name: string; logo: string };
+}
+
+const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
+  return (
+    <motion.div
+      variants={itemVariants}
+      className="transition-all p-6 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:filter-none"
+    >
+      <img
+        src={skill.logo}
+        alt={skill.name}
+        className="w-16 h-16 mb-4 text-white transition-all duration-300 filter grayscale hover:filter-none"
+      />
+      <h3 className="text-xl font-semibold text-center">{skill.name}</h3>
+    </motion.div>
   );
 };
 

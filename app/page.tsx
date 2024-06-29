@@ -3,6 +3,7 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import NavBar from "@/components/Navbar";
+import AboutMe from "@/components/About";
 
 const Home: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
       </Head>
       <NavBar />
       <Hero />
+      <AboutMe />
       <Skills />
     </div>
   );

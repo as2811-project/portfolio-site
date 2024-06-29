@@ -4,12 +4,10 @@ import { Navbar, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
 export default function NavBar() {
   return (
     <Navbar>
-      <NavbarContent className="hidden sm:flex gap-4 mt-5" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            About Me
-          </Link>
-        </NavbarItem>
+      <NavbarContent
+        className="hidden sm:flex gap-4 mt-5 ml-9 p-5"
+        justify="center"
+      >
         <NavbarItem isActive>
           <Link aria-current="page" href="/webprojects">
             Web

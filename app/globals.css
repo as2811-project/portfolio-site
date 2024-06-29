@@ -17,3 +17,41 @@ main {
 .fixed {
   z-index: 1;
 }
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.code-snippet {
+  position: absolute;
+  opacity: 10%;
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.snippet1 {
+  top: 25%;
+  left: 0;
+  right:10%;
+  animation-delay: 0.5s;
+}
+
+.snippet2 {
+  top: -40%;
+  left: 20%;
+  right:10%;
+  animation-delay: 1s;
+}
+
+.snippet3 {
+  top: 30%;
+  left: 40%;
+  right:10%;
+  animation-delay: 1.5s;
+}
