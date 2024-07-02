@@ -3,6 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
 import { FlipWords } from "./flip-words";
+import FloatingChips from "./FloatingChips";
 
 const DottedLineBackground = () => (
   <svg
@@ -41,6 +42,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative flex flex-col justify-center h-screen ml-8 mb-2 p-8 overflow-hidden">
       <DottedLineBackground />
+      <FloatingChips />
       <div className="relative z-10 flex flex-row">
         <div className="flex-grow">
           <h1 className="hero-text text-neutral-400 text-8xl font-thin mb-5 text-left ml-5 tracking-tight">
@@ -58,9 +60,14 @@ const Hero: React.FC = () => {
             <br />
           </p>
           <div className="ml-5 flex flex-grid mt-5">
-            <button className="hover:bg-sky-200 rounded-full p-2">
-              <FaLinkedinIn className="text-sky-500 text-2xl" />
-            </button>
+            <a
+              href="https://www.linkedin.com/in/anandh-sellamuthu-as"
+              target="_blank"
+            >
+              <button className="hover:bg-sky-200 rounded-full p-2">
+                <FaLinkedinIn className="text-sky-500 text-2xl" />
+              </button>
+            </a>
             <button className="hover:bg-orange-200 rounded-full p-2 ml-2">
               <FiGithub className="text-orange-500 text-2xl" />
             </button>
@@ -73,7 +80,7 @@ const Hero: React.FC = () => {
           <img
             src="/images/snippet1.png"
             alt="Code Snippet 1"
-            className="code-snippet snippet1"
+            className=" code-snippet snippet1"
           />
           <img
             src="/images/snippet2.png"

@@ -44,7 +44,6 @@ export const ParallaxScroll = ({
               key={"grid-1" + idx}
             >
               <Image
-                unoptimized
                 src={el}
                 className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0 transition hover:-translate-y-1 hover:scale-110 ease-in-out delay-150"
                 height="400"

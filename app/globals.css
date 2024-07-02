@@ -41,7 +41,7 @@ main {
 .code-snippet {
   position: absolute;
   opacity: 0;
-  animation: slideIn 1s ease-in-out forwards;
+  animation: slideIn 3s ease-in-out forwards;
 }
 
 .snippet1 {
@@ -63,4 +63,55 @@ main {
   left: 40%;
   right:10%;
   animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.chip-0 {
+  top: 50px;
+  left: 0px;
+}
+
+.chip-1 {
+  top: 150px;
+  left: 200px;
+}
+
+.chip-2 {
+  top: 190px;
+  left: 400px;
+}
+
+.chip-3 {
+  top: 50px;
+  left: 820px;
+}
+
+.chip-4 {
+  top: 50px;
+  left: 1600px;
+}
+
+.chip-5 {
+  top: 20px;
+  left: 1050px;
+}
+
+.chip-6 {
+  top: 50px;
+  left: 1300px;
 }

@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 
 export default function NavBar() {
   return (
-    <Navbar>
+    <Navbar className="bg-black ">
       <NavbarContent
         className="hidden sm:flex gap-4 mt-5 ml-9 p-5"
         justify="center"
@@ -17,7 +17,7 @@ export default function NavBar() {
           <NavItem href="/webprojects">Web</NavItem>
         </NavbarItem>
         <NavbarItem isActive>
-          <NavItem href="/data">Data</NavItem>
+          <NavItem href="/dataprojects">Data</NavItem>
         </NavbarItem>
         <NavbarItem isActive>
           <NavItem href="/photography">Photography</NavItem>
