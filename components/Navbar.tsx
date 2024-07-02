@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
-import { Navbar, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
+import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/react";
+import NavItem from "./NavItem";
 
 export default function NavBar() {
   return (
@@ -9,19 +11,16 @@ export default function NavBar() {
         justify="center"
       >
         <NavbarItem isActive>
-          <Link aria-current="page" href="/webprojects">
-            Web
-          </Link>
+          <NavItem href="/">Home</NavItem>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Data
-          </Link>
+        <NavbarItem isActive>
+          <NavItem href="/webprojects">Web</NavItem>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="/photography">
-            Photography
-          </Link>
+        <NavbarItem isActive>
+          <NavItem href="/data">Data</NavItem>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <NavItem href="/photography">Photography</NavItem>
         </NavbarItem>
       </NavbarContent>
     </Navbar>

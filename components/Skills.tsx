@@ -6,7 +6,7 @@ const languages = [
   { name: "Python", logo: "https://cdn.simpleicons.org/python" },
   { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript" },
   { name: "TypeScript", logo: "https://cdn.simpleicons.org/typeScript" },
-  { name: "C#", logo: "https://cdn.simpleicons.org/csharp" },
+  { name: "C#", logo: "/Csharp.png" },
 ];
 
 const frameworks = [
@@ -14,8 +14,8 @@ const frameworks = [
   { name: "TailwindCSS", logo: "https://cdn.simpleicons.org/tailwindcss" },
   { name: ".NET", logo: "https://cdn.simpleicons.org/dotnet" },
   { name: "PySpark", logo: "https://cdn.simpleicons.org/apachespark" },
-  { name: "Kafka", logo: "https://cdn.simpleicons.org/apachekafka" },
-  { name: "AWS", logo: "https://cdn.simpleicons.org/amazonwebservices" },
+  { name: "Kafka", logo: "/kafka.png" },
+  { name: "AWS", logo: "/aws.png" },
   { name: "Supabase", logo: "https://cdn.simpleicons.org/supabase" },
   { name: "Git", logo: "https://cdn.simpleicons.org/git" },
 ];
@@ -111,7 +111,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
     <motion.div
       variants={itemVariants}
-      className="transition-all p-6 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:filter-none"
+      className="transition-all p-6 flex flex-col items-center justify-center transition-all duration-300 hover:filter-none"
     >
       <img
         src={skill.logo}

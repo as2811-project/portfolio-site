@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
       <DottedLineBackground />
       <div className="relative z-10 flex flex-row">
         <div className="flex-grow">
-          <h1 className="text-8xl font-thin mb-5 text-left ml-5 tracking-tight">
+          <h1 className="hero-text text-neutral-400 text-8xl font-thin mb-5 text-left ml-5 tracking-tight">
             <span className="font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.green.300),theme(colors.fuchsia.400),theme(colors.sky.500),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.green.100),theme(colors.green.300))] bg-[length:200%_auto] animate-gradient">
               Anandh{" "}
             </span>
@@ -52,15 +52,21 @@ const Hero: React.FC = () => {
           <h2 className="text-4xl ml-3.5">
             <FlipWords words={text} />
           </h2>
-          <p className="ml-6 mt-5">
+          <p className="ml-6 mt-5 text-neutral-400">
             An aspiring software (backend) and data engineer. <br />
             A portrait photographer as well sometimes.
             <br />
           </p>
           <div className="ml-5 flex flex-grid mt-5">
-            <FaLinkedinIn className="mr-5 text-sky-500 text-2xl" />
-            <FiGithub className="mr-5 text-orange-500 text-2xl" />
-            <BiLogoGmail className="text-red-500 text-2xl" />
+            <button className="hover:bg-sky-200 rounded-full p-2">
+              <FaLinkedinIn className="text-sky-500 text-2xl" />
+            </button>
+            <button className="hover:bg-orange-200 rounded-full p-2 ml-2">
+              <FiGithub className="text-orange-500 text-2xl" />
+            </button>
+            <button className="hover:bg-red-200 rounded-full p-2 ml-2">
+              <BiLogoGmail className="text-red-500 text-2xl" />
+            </button>
           </div>
         </div>
         <div className="relative w-1/3 mr-10 ml-10">

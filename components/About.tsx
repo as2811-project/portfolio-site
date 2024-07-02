@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { FaCode, FaDatabase, FaCamera } from "react-icons/fa";
+import { FaCode, FaDatabase } from "react-icons/fa";
+import { BsCamera2 } from "react-icons/bs";
 
 const AboutMe: React.FC = () => {
   return (
@@ -10,11 +11,13 @@ const AboutMe: React.FC = () => {
           <div className="md:w-1/3 mb-8 md:mb-0">
             <div className="relative w-64 h-64 mx-auto">
               <Image
+                unoptimized
                 src="/IMG_6806.jpg"
                 alt="Anandh"
-                layout="fill"
+                width={500}
+                height={500}
                 objectFit="cover"
-                className="rounded-full shadow-lg"
+                className="rounded-full aspect-square object-cover"
               />
             </div>
           </div>
@@ -22,7 +25,7 @@ const AboutMe: React.FC = () => {
             <h2 className="text-4xl font-medium mb-8 tracking-tight">
               About Me
             </h2>
-            <p className="text-xl mb-6 text-neutral-400">
+            <p className="text-xl mb-6 text-neutral-400 tracking-tight">
               Hello! <span className="text-white">I'm Anandh</span>, an aspiring
               software and data engineer with a passion for backend development
               and data science. Complex software systems and engineering
@@ -37,7 +40,7 @@ const AboutMe: React.FC = () => {
               <span className="text-purple-400">Melbourne</span>. I follow
               European Football or make digital art when I'm free.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
               <SkillCard
                 icon={<FaCode />}
                 title="Software Engineering"
@@ -46,14 +49,17 @@ const AboutMe: React.FC = () => {
               <SkillCard
                 icon={<FaDatabase className="text-red-500" />}
                 title="Data Engineering"
-                description="Raw data to insights, embeddings for language models and recommender systems."
+                description="Analytics, Pipelines, ETL, and more"
               />
               <SkillCard
-                icon={<FaCamera className="text-lime-500" />}
+                icon={<BsCamera2 className="text-lime-500" />}
                 title="Photography"
                 description="Pictures of people, just to see a smile on their faces :)"
               />
             </div>
+            <button className="rounded-full py-2 px-2 bg-sky-500 hover:bg-sky-600">
+              My Resume
+            </button>
           </div>
         </div>
       </div>

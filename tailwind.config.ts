@@ -16,6 +16,10 @@ const config: Config = {
           to: { 'background-position': '200% center' },
         }
       },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      }
     },
   },
   plugins: [],
