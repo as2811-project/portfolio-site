@@ -15,7 +15,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
       {projects.map((project, index) => (
         <div
           key={index}
-          className="md:flex-col items-start rounded-lg shadow-lg overflow-hidden mb-5"
+          className="md:flex-col items-start rounded-lg shadow-lg mb-5"
         >
           <div className="p-6">
             <h2 className="text-2xl font-medium mb-2">
@@ -23,7 +23,7 @@ export default function ProjectList({ projects }: { projects: Project[] }) {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-violet-400 hover:text-violet-500 flex items-center"
+                className="text-sky-500 hover:text-sky-600 flex items-center"
               >
                 {project.title} <FaLink className="ml-2 text-white" />
               </a>

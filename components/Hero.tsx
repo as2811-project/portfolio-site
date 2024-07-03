@@ -76,23 +76,6 @@ const Hero: React.FC = () => {
             </button>
           </div>
         </div>
-        <div className="relative w-1/3 mr-10 ml-10">
-          <img
-            src="/images/snippet1.png"
-            alt="Code Snippet 1"
-            className=" code-snippet snippet1"
-          />
-          <img
-            src="/images/snippet2.png"
-            alt="Code Snippet 2"
-            className="code-snippet snippet2"
-          />
-          <img
-            src="/images/snippet3.png"
-            alt="Code Snippet 3"
-            className="code-snippet snippet3"
-          />
-        </div>
       </div>
     </section>
   );

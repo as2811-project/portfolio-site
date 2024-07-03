@@ -33,7 +33,7 @@ export default async function WebProjects() {
   return (
     <div>
       <NavBar />
-      <section className="h-screen flex-col justify-center h-screen ml-6 mb-2 p-8 overflow-hidden">
+      <section className="h-screen flex-col justify-center h-screen ml-6 mb-2 p-8">
         <h1 className="text-5xl font-medium mb-5 text-left ml-5 tracking-tight">
           My {"<WebDev/>"} Projects
         </h1>

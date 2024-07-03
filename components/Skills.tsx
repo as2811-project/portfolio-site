@@ -4,7 +4,6 @@ import { motion, useAnimation, Variants } from "framer-motion";
 
 const languages = [
   { name: "Python", logo: "https://cdn.simpleicons.org/python" },
-  { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript" },
   { name: "TypeScript", logo: "https://cdn.simpleicons.org/typeScript" },
   { name: "C#", logo: "/Csharp.png" },
 ];
