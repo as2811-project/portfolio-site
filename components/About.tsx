@@ -11,7 +11,6 @@ const AboutMe: React.FC = () => {
           <div className="md:w-1/3 mb-8 md:mb-0">
             <div className="relative w-64 h-64 mx-auto">
               <Image
-                unoptimized
                 src="/IMG_6806.jpg"
                 alt="Anandh"
                 width={500}
@@ -37,8 +36,17 @@ const AboutMe: React.FC = () => {
               <span className="text-yellow-400">Chennai</span>, India. I'm in
               Australia at the moment, pursuing my Masters in Data Science at
               RMIT University,{" "}
-              <span className="text-purple-400">Melbourne</span>. I follow
-              European Football or make digital art when I'm free.
+              <span className="text-purple-400">Melbourne</span>. I have a
+              couple of years of product{" "}
+              <a
+                className="text-sky-400 after:content-['_↗'] ..."
+                href="/workexp"
+                target="_blank"
+              >
+                experience
+              </a>{" "}
+              (albeit not exactly an engineering role) and I follow European
+              Football or make digital art when I'm free.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
               <SkillCard

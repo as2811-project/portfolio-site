@@ -1,27 +1,37 @@
 "use client";
 import React from "react";
-import { Navbar, NavbarContent, NavbarItem } from "@nextui-org/react";
+import { Navbar, NavbarContent } from "@nextui-org/react";
 import NavItem from "./NavItem";
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaLaptopCode,
+  FaDatabase,
+  FaCamera,
+} from "react-icons/fa";
+import { BsPersonWorkspace } from "react-icons/bs";
+
+const navItems = [
+  { href: "/", label: "Home", icon: FaHome },
+  { href: "/workexp", label: "Experience", icon: BsPersonWorkspace },
+  { href: "/webprojects", label: "Web", icon: FaLaptopCode },
+  { href: "/dataprojects", label: "Data", icon: FaDatabase },
+  { href: "/photography", label: "Photography", icon: FaCamera },
+];
 
 export default function NavBar() {
   return (
-    <Navbar className="bg-black ">
+    <Navbar className="bg-black">
       <NavbarContent
-        className="hidden sm:flex gap-4 mt-5 ml-9 p-5"
+        className="flex gap-2 sm:gap-4 mt-5 ml-2 sm:ml-9 p-2 sm:p-5"
         justify="center"
       >
-        <NavbarItem isActive>
-          <NavItem href="/">Home</NavItem>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <NavItem href="/webprojects">Web</NavItem>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <NavItem href="/dataprojects">Data</NavItem>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <NavItem href="/photography">Photography</NavItem>
-        </NavbarItem>
+        {navItems.map((item) => (
+          <NavItem key={item.href} href={item.href} icon={item.icon}>
+            {item.label}
+          </NavItem>
+        ))}
       </NavbarContent>
     </Navbar>
   );

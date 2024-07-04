@@ -43,9 +43,9 @@ const Hero: React.FC = () => {
     <section className="relative flex flex-col justify-center h-screen ml-8 mb-2 p-8 overflow-hidden">
       <DottedLineBackground />
       <FloatingChips />
-      <div className="relative z-10 flex flex-row">
-        <div className="flex-grow">
-          <h1 className="hero-text text-neutral-400 text-8xl font-thin mb-5 text-left ml-5 tracking-tight">
+      <div className="flex flex-col md:w-1/3 relative z-10 flex flex-row">
+        <div className="flex flex-col md:flex-grow">
+          <h1 className="md:hero-text text-neutral-400 text-6xl font-thin mb-5 text-left ml-5 tracking-tight">
             <span className="font-medium bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.green.300),theme(colors.fuchsia.400),theme(colors.sky.500),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.green.100),theme(colors.green.300))] bg-[length:200%_auto] animate-gradient">
               Anandh{" "}
             </span>

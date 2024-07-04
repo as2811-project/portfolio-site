@@ -17,10 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={geist.className}>
-        {children}
-        {/* <Footer /> */}
-      </body>
+      <body className={geist.className}>{children}</body>
     </html>
   );
 }
