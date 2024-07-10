@@ -115,7 +115,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
       <img
         src={skill.logo}
         alt={skill.name}
-        className="w-16 h-16 mb-4 text-white transition-all duration-300 filter grayscale hover:filter-none"
+        className="w-16 h-16 mb-4 text-white"
       />
       <h3 className="text-xl font-semibold text-center">{skill.name}</h3>
     </motion.div>

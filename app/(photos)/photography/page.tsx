@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { createClient } from "@supabase/supabase-js";
 import PhotographyClient from "@/components/PhotographyClient";
 import NavBar from "@/components/Navbar";

@@ -1,7 +1,5 @@
 "use client";
-
-import { FaLink } from "react-icons/fa6";
-
+import { FaGithub } from "react-icons/fa";
 interface Project {
   title: string;
   description: string;
@@ -11,31 +9,22 @@ interface Project {
 
 export default function ProjectList({ projects }: { projects: Project[] }) {
   return (
-    <div className="items-start px-4">
+    <div className="items-start px-4 grid grid-cols-2 gap-8">
       {projects.map((project, index) => (
-        <div
-          key={index}
-          className="md:flex-col items-start rounded-lg shadow-lg mb-5"
-        >
+        <div key={index} className={`md:flex-col items-start rounded-lg mb-5`}>
           <div className="p-6">
-            <h2 className="text-2xl font-medium mb-2">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sky-500 hover:text-sky-600 flex items-center"
-              >
-                {project.title} <FaLink className="ml-2 text-white" />
-              </a>
+            <h2 className="text-2xl font-medium mb-2 text-white font-medium tracking-tight flex items-center">
+              {project.title}
             </h2>
             <p className="text-gray-300">{project.description}</p>
           </div>
-          <div className="md:w-1/3">
-            <img
-              src={project.mediaUrl}
-              alt={project.title}
-              className="w-100 h-0 object-cover"
-            />
+          <div className="ml-5">
+            <a href={project.github} target="_blank">
+              <button className="flex flex-row rounded-full py-2 px-4 bg-neutral-950 hover:bg-neutral-800 items-center">
+                <FaGithub className="mr-2" />
+                Github
+              </button>
+            </a>
           </div>
         </div>
       ))}

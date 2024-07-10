@@ -35,13 +35,13 @@ export default async function WebProjects() {
       <NavBar />
       <section className="h-screen flex-col justify-center h-screen ml-6 mb-2 p-8">
         <h1 className="text-5xl font-medium mb-5 text-left ml-5 tracking-tight">
-          My {"<WebDev/>"} Projects
+          My Web Dev Projects
         </h1>
         <p className="font-normal text-neutral-300 mb-5 text-left ml-6 tracking-tight">
           These are some of the projects I worked on as I embarked on my
           'Project-Based Learning' journey.
         </p>
-        <ProjectList projects={projects} />
+        <ProjectList projects={projects} pageType="webDev" />
       </section>
     </div>
   );

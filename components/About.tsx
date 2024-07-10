@@ -15,7 +15,6 @@ const AboutMe: React.FC = () => {
                 alt="Anandh"
                 width={500}
                 height={500}
-                objectFit="cover"
                 className="rounded-full aspect-square object-cover"
               />
             </div>
@@ -45,8 +44,8 @@ const AboutMe: React.FC = () => {
               >
                 experience
               </a>{" "}
-              (albeit not exactly an engineering role) and I follow European
-              Football or make digital art when I'm free.
+              (albeit not exactly an engineering role) and I follow Manchester
+              City FC or make digital art when I'm free.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
               <SkillCard

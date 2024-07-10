@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Testimonials() {
   return (
-    <div className="ml-5">
+    <div className="ml-5 pb-10">
       <h2 className="text-2xl font-medium mt-8 mb-5 text-left tracking-tight">
         What people say...
         <Divider className="opacity-20" />
@@ -30,7 +30,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="bg-neutral-900 p-5 rounded-lg">
-          <BiSolidQuoteAltLeft className="mt-5" />
+          <BiSolidQuoteAltLeft />
           <p className="font-light italic text-xl p-3">"What a legend bruv!"</p>
           <div className="flex flex-row">
             <span className="font-light not-italic text-xs content-center indent-10">
@@ -39,7 +39,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="bg-neutral-900 p-5 rounded-lg">
-          <BiSolidQuoteAltLeft className="mt-5" />
+          <BiSolidQuoteAltLeft />
           <p className="font-light italic text-xl p-3">
             "He's handsome and very helpful{" "}
             <span className="font-normal not-italic"> 😄"</span>
@@ -51,7 +51,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="bg-neutral-900 p-5 rounded-lg">
-          <BiSolidQuoteAltLeft className="mt-5" />
+          <BiSolidQuoteAltLeft />
           <p className="font-light italic text-xl p-3">
             "King <span className="font-normal not-italic"> 👑"</span>
           </p>
