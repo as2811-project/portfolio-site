@@ -28,12 +28,20 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, icon: Icon }) => {
             layoutId="pill-tab"
             animate={{ x: isActive ? 0 : -100, opacity: isActive ? 1 : 0 }}
             transition={{ type: "spring", duration: 0.5 }}
-            className="absolute inset-0 z-0 bg-gradient-to-r from-violet-600 to-indigo-600 rounded-full"
+            className="absolute inset-0 z-0 bg-white rounded-full"
           ></motion.span>
         )}
         <div className={`${baseClasses} z-10`}>
-          <Icon className="w-5 h-5 sm:mr-2 ml-2" />
-          <span className={`hidden ${isActive ? "sm:inline" : "sm:hidden"}`}>
+          <Icon
+            className={`w-5 h-5 sm:mr-2 ml-2 ${
+              isActive ? "text-black" : "text-white"
+            }`}
+          />
+          <span
+            className={`hidden text-black ${
+              isActive ? "sm:inline" : "sm:hidden"
+            }`}
+          >
             {children}
           </span>
         </div>
@@ -43,3 +51,4 @@ const NavItem: React.FC<NavItemProps> = ({ href, children, icon: Icon }) => {
 };
 
 export default NavItem;
+// bg-gradient-to-r from-violet-600 to-indigo-600

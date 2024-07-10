@@ -2,18 +2,12 @@
 import React from "react";
 import { Navbar, NavbarContent } from "@nextui-org/react";
 import NavItem from "./NavItem";
-import {
-  FaBars,
-  FaTimes,
-  FaHome,
-  FaLaptopCode,
-  FaDatabase,
-  FaCamera,
-} from "react-icons/fa";
+import { FaLaptopCode, FaDatabase, FaCamera } from "react-icons/fa";
+import { GoHomeFill } from "react-icons/go";
 import { BsPersonWorkspace } from "react-icons/bs";
 
 const navItems = [
-  { href: "/", label: "Home", icon: FaHome },
+  { href: "/", label: "Home", icon: GoHomeFill },
   { href: "/workexp", label: "Experience", icon: BsPersonWorkspace },
   { href: "/webprojects", label: "Web", icon: FaLaptopCode },
   { href: "/dataprojects", label: "Data", icon: FaDatabase },

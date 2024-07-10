@@ -27,16 +27,14 @@ const AboutMe: React.FC = () => {
               Hello! <span className="text-white">I'm Anandh</span>, an aspiring
               software and data engineer with a passion for backend development
               and data science. Complex software systems and engineering
-              fascinate and inspire me. But sometimes I tend to overdo it. For
-              example, there is no reason for this site to use Next.js or any JS
-              for that matter. Yet here it is, with all sorts of animations and
-              interactivities. <br></br>
-              As for other miscellaneous information: I'm from{" "}
-              <span className="text-yellow-400">Chennai</span>, India. I'm in
-              Australia at the moment, pursuing my Masters in Data Science at
-              RMIT University,{" "}
-              <span className="text-purple-400">Melbourne</span>. I have a
-              couple of years of product{" "}
+              fascinate and inspire me. But sometimes I tend to overdo
+              complexity. For example, there is no reason for this site to use
+              Next.js or any JS for that matter. Yet here it is, with all sorts
+              of animations and interactivities. <br></br>
+              As for other miscellaneous information: I'm from Chennai, India.
+              I'm in Australia at the moment, pursuing my Masters in Data
+              Science at RMIT University, Melbourne. I have a couple of years of
+              product{" "}
               <a
                 className="text-sky-400 after:content-['_↗'] ..."
                 href="/workexp"
@@ -49,22 +47,22 @@ const AboutMe: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
               <SkillCard
-                icon={<FaCode />}
+                color="bg-gradient-to-b from-blue-700 via-neutral-900 to-black"
                 title="Software Engineering"
                 description="Backend development with a focus on scalable and efficient solutions."
               />
               <SkillCard
-                icon={<FaDatabase className="text-red-500" />}
+                color="bg-gradient-to-b from-red-700 via-neutral-900 to-black"
                 title="Data Engineering"
                 description="Analytics, Pipelines, ETL, and more"
               />
               <SkillCard
-                icon={<BsCamera2 className="text-lime-500" />}
+                color="bg-gradient-to-b from-lime-700 via-neutral-900 to-black"
                 title="Photography"
                 description="Pictures of people, just to see a smile on their faces :)"
               />
             </div>
-            <button className="rounded-full py-2 px-2 bg-sky-500 hover:bg-sky-600">
+            <button className="rounded-full py-2 px-2 text-black bg-white hover:bg-neutral-700 hover:text-white">
               My Resume
             </button>
           </div>
@@ -75,17 +73,19 @@ const AboutMe: React.FC = () => {
 };
 
 const SkillCard: React.FC<{
-  icon: React.ReactNode;
+  //color: string;
   title: string;
   description: string;
-}> = ({ icon, title, description }) => {
+}> = ({ title, description }) => {
   return (
-    <div className="p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
-      <div className="text-3xl mb-4 text-blue-500">{icon}</div>
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div
+      className={`p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl`}
+    >
+      <h3 className="text-xl font-medium mb-2">{title}</h3>
+      <p className="text-neutral-300">{description}</p>
     </div>
   );
 };
 
 export default AboutMe;
+//bg-gradient-to-b from-blue-700 via-neutral-900 to-black

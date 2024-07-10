@@ -1,6 +1,5 @@
 import NavBar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials";
-import { Divider } from "@nextui-org/react";
 import Image from "next/image";
 
 export default async function Experiences() {
@@ -11,18 +10,16 @@ export default async function Experiences() {
         <h1 className="text-5xl font-medium mb-5 text-left ml-5 tracking-tight">
           Experience so far...
         </h1>
-        <h2 className="text-2xl mt-8 mb-5 text-left ml-5 tracking-tight">
+        <h2 className="mt-8 text-left text-neutral-400 ml-5 tracking-tight">
           Internships and Full Time
-          <Divider className="opacity-20" />
         </h2>
         <div>
-          <div className="flex flex-row mt-8 content-center">
+          <div className="flex flex-row mt-3 content-center">
             <Image
               src="/Freshworks Inc_idGK6bEIM__7.png"
               alt="Freshworks"
               width={55}
               height={40}
-              objectFit="cover"
               className="ml-5"
             />
             <div className="flex flex-col">
@@ -52,13 +49,11 @@ export default async function Experiences() {
             </li>
             <li>
               I solved over 800 issues, averaging over 85-90% in CSAT scores
-              during my time there. I maintained an SLA adherence of 90% as
-              well.
+              during my time there.
             </li>
             <li>
-              But I did take a hit in raw interaction metrics as I like to
-              personalise everything that I did, resulting in high interaction
-              counts.
+              But I did take a hit in raw interaction metrics as I'd personalise
+              everything that I did, resulting in high interaction counts.
             </li>
             <li>
               Developed powerful automation scripts, boosting productivity in
@@ -71,19 +66,17 @@ export default async function Experiences() {
             <li>Won a couple of awards as well for my work.</li>
           </div>
         </div>
-        <h2 className="text-2xl mt-8 mb-5 text-left ml-5 tracking-tight">
+        <h2 className="mt-8 text-left text-neutral-400 ml-5 tracking-tight">
           Part Time and Volunteering
-          <Divider className="opacity-20" />
         </h2>
         <div>
-          <div className="flex flex-row mt-8 content-center">
+          <div className="flex flex-row mt-3 content-center">
             <div className="ml-5 content-center">
               <Image
                 src="/tedx-logo-FE7A5DACA7-seeklogo.com.png"
                 alt="tedx"
                 width={85}
                 height={50}
-                objectFit="cover"
               />
             </div>
             <div className="flex flex-col">
@@ -123,7 +116,6 @@ export default async function Experiences() {
                 alt="woolies"
                 width={90}
                 height={60}
-                objectFit="cover"
               />
             </div>
             <div className="flex flex-col">

@@ -87,7 +87,7 @@ const Skills: React.FC = () => {
         <div>
           <h3 className="text-3xl font-medium mb-8">Tools & Frameworks</h3>
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3"
             variants={containerVariants}
             initial="hidden"
             animate={controls}
@@ -110,7 +110,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
     <motion.div
       variants={itemVariants}
-      className="transition-all p-6 flex flex-col items-center justify-center transition-all duration-300 hover:filter-none"
+      className="transition-all p-2 flex flex-col items-center justify-center transition-all duration-300 hover:filter-none"
     >
       <img
         src={skill.logo}
