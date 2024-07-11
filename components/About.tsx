@@ -58,9 +58,14 @@ const AboutMe: React.FC = () => {
                 description="Pictures of people, just to see a smile on their faces :)"
               />
             </div>
-            <button className="rounded-full py-2 px-2 text-black bg-white hover:bg-neutral-700 hover:text-white">
-              My Resume
-            </button>
+            <a
+              href="https://lavulopbfiogsnnczeae.supabase.co/storage/v1/object/public/photos/Resume_Anandh.pdf?t=2024-07-11T06%3A48%3A55.976Z"
+              target="_blank"
+            >
+              <button className="rounded-full py-2 px-2 text-black bg-white hover:bg-neutral-700 hover:text-white">
+                My Resume
+              </button>
+            </a>
           </div>
         </div>
       </div>
