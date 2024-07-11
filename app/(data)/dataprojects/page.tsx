@@ -6,7 +6,7 @@ interface Project {
   title: string;
   description: string;
   github: string;
-  mediaUrl: string;
+  media: string;
 }
 
 async function getProjects() {

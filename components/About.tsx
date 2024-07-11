@@ -1,7 +1,6 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
-import { FaCode, FaDatabase } from "react-icons/fa";
-import { BsCamera2 } from "react-icons/bs";
 
 const AboutMe: React.FC = () => {
   return (
@@ -47,17 +46,14 @@ const AboutMe: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-5">
               <SkillCard
-                color="bg-gradient-to-b from-blue-700 via-neutral-900 to-black"
                 title="Software Engineering"
                 description="Backend development with a focus on scalable and efficient solutions."
               />
               <SkillCard
-                color="bg-gradient-to-b from-red-700 via-neutral-900 to-black"
                 title="Data Engineering"
                 description="Analytics, Pipelines, ETL, and more"
               />
               <SkillCard
-                color="bg-gradient-to-b from-lime-700 via-neutral-900 to-black"
                 title="Photography"
                 description="Pictures of people, just to see a smile on their faces :)"
               />

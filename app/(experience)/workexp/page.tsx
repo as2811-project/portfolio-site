@@ -1,5 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
 import NavBar from "@/components/Navbar";
-import Testimonials from "@/components/Testimonials";
 import Image from "next/image";
 
 export default async function Experiences() {
