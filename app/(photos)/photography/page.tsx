@@ -34,7 +34,7 @@ export default async function Photography() {
     <div>
       <NavBar />
       <section className="relative flex flex-col justify-center h-screen ml-6 mb-2 p-8">
-        <h1 className="text-5xl font-medium mb-5 text-left ml-4 tracking-tight">
+        <h1 className="mt-16 text-5xl font-medium mb-5 text-left ml-4 tracking-tight">
           Here's some of my photography
         </h1>
         <PhotographyClient imageUrls={imageUrls} />

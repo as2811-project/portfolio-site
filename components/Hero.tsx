@@ -2,7 +2,6 @@ import React from "react";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { BiLogoGmail } from "react-icons/bi";
-import { FlipWords } from "./flip-words";
 
 const DottedLineBackground = () => (
   <svg
@@ -30,13 +29,11 @@ const DottedLineBackground = () => (
 );
 
 const Hero: React.FC = () => {
-  const text = ["Software", "Data", "Photography"];
-
   return (
     <section className="relative flex flex-col justify-center h-screen ml-8 mb-2 p-8">
       <DottedLineBackground />
-      <div className="lg:w-1/3 relative z-10 flex flex-row">
-        <div className="flex flex-col md:flex-grow">
+      <div className="lg:w-1/3 relative flex flex-row">
+        <div className="flex flex-col md:flex-grow mt-10">
           <h1 className="text-neutral-400 text-9xl font-thin mb-2 text-left ml-5 tracking-tight">
             <span className="font-medium bg-gradient-to-b from-fuchsia-600 to-fuchsia-500 inline-block text-transparent bg-clip-text">
               Anandh{" "}
@@ -44,8 +41,8 @@ const Hero: React.FC = () => {
             Sellamuthu
           </h1>
           <p className="ml-6 mt-2 text-neutral-400">
-            An aspiring software (backend) and data engineer. <br />
-            A portrait photographer as well sometimes.
+            An aspiring software and data engineer. A portrait photographer as
+            well sometimes.
             <br />
           </p>
           <div className="ml-5 flex flex-grid mt-5">

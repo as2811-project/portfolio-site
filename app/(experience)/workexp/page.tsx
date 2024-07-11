@@ -7,13 +7,13 @@ export default async function Experiences() {
     <div>
       <NavBar />
       <section className="h-screen flex-col justify-center h-screen ml-6 mb-2 p-8 mb-5">
-        <h1 className="text-5xl font-medium mb-5 text-left ml-5 tracking-tight">
+        <h1 className="mt-16 text-5xl font-medium mb-5 text-left ml-5 tracking-tight">
           Experience so far...
         </h1>
         <h2 className="mt-8 text-left text-neutral-400 ml-5 tracking-tight">
           Internships and Full Time
         </h2>
-        <div>
+        <div className="p-5">
           <div className="flex flex-row mt-3 content-center">
             <Image
               src="/Freshworks Inc_idGK6bEIM__7.png"
@@ -23,7 +23,7 @@ export default async function Experiences() {
               className="ml-5"
             />
             <div className="flex flex-col">
-              <h2 className="font-light text-2xl tracking-tight ml-5">
+              <h2 className="font-medium text-2xl tracking-tight ml-5">
                 Product Specialist | Freshworks
               </h2>
               <h3 className="font-light tracking-tight ml-5">
@@ -69,7 +69,7 @@ export default async function Experiences() {
         <h2 className="mt-8 text-left text-neutral-400 ml-5 tracking-tight">
           Part Time and Volunteering
         </h2>
-        <div>
+        <div className="p-5">
           <div className="flex flex-row mt-3 content-center">
             <div className="ml-5 content-center">
               <Image
@@ -80,7 +80,7 @@ export default async function Experiences() {
               />
             </div>
             <div className="flex flex-col">
-              <h2 className="font-light text-2xl tracking-tight ml-5">
+              <h2 className="font-medium text-2xl tracking-tight ml-5">
                 Assistant Manager, Human Resources | TEDx Chennai
               </h2>
               <h3 className="font-light tracking-tight ml-5">
@@ -108,7 +108,7 @@ export default async function Experiences() {
             </li>
           </div>
         </div>
-        <div className="mb-5">
+        <div className="p-5 mb-5">
           <div className="flex flex-row mt-8 content-center">
             <div className="ml-5 content-center">
               <Image
@@ -119,7 +119,7 @@ export default async function Experiences() {
               />
             </div>
             <div className="flex flex-col">
-              <h2 className="font-light text-2xl tracking-tight ml-5">
+              <h2 className="font-medium text-2xl tracking-tight ml-5">
                 Customer Service | Woolworths Williamstown
               </h2>
               <h3 className="font-light tracking-tight ml-5">
@@ -127,7 +127,7 @@ export default async function Experiences() {
               </h3>
             </div>
           </div>
-          <div className="flex flex-col ml-5 mt-5 content-center">
+          <div className="flex flex-col ml-5 mt-5 content-center mb-10">
             <li>
               Currently assisting customers with their weekly grocery shopping
               at Woolies.
@@ -139,7 +139,6 @@ export default async function Experiences() {
             <li>If required, I help with store restocking as well.</li>
           </div>
         </div>
-        <Testimonials />
       </section>
     </div>
   );

@@ -16,9 +16,9 @@ const navItems = [
 
 export default function NavBar() {
   return (
-    <Navbar className="bg-black">
+    <Navbar className="bg-neutral-900 fixed z-70">
       <NavbarContent
-        className="flex gap-2 sm:gap-4 mt-5 ml-2 sm:ml-9 p-2 sm:p-5"
+        className="flex gap-2 sm:gap-4 mt-2 ml-2 sm:ml-9 p-2 sm:p-5"
         justify="center"
       >
         {navItems.map((item) => (

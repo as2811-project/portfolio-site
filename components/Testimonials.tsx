@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import { BiSolidQuoteAltLeft } from "react-icons/bi";
 
 export default function Testimonials() {
   return (
@@ -8,8 +7,7 @@ export default function Testimonials() {
         What people say...
       </h2>
       <div className="grid grid-cols-2 gap-4">
-        <div className="bg-neutral-900 p-5 rounded-lg">
-          <BiSolidQuoteAltLeft />
+        <div className="bg-neutral-950 p-5 rounded-lg">
           <p className="font-light italic text-xl p-3">
             "He's the best!<span className="font-normal not-italic"> 🤩"</span>
           </p>
@@ -19,8 +17,7 @@ export default function Testimonials() {
             </span>
           </div>
         </div>
-        <div className="bg-neutral-900 p-5 rounded-lg">
-          <BiSolidQuoteAltLeft />
+        <div className="bg-neutral-950 p-5 rounded-lg">
           <p className="font-light italic text-xl p-3">"What a legend bruv!"</p>
           <div className="flex flex-row">
             <span className="font-light not-italic text-xs content-center indent-10">
@@ -28,8 +25,7 @@ export default function Testimonials() {
             </span>
           </div>
         </div>
-        <div className="bg-neutral-900 p-5 rounded-lg">
-          <BiSolidQuoteAltLeft />
+        <div className="bg-neutral-950 p-5 rounded-lg">
           <p className="font-light italic text-xl p-3">
             "He's handsome and very helpful{" "}
             <span className="font-normal not-italic"> 😄"</span>
@@ -40,8 +36,7 @@ export default function Testimonials() {
             </span>
           </div>
         </div>
-        <div className="bg-neutral-900 p-5 rounded-lg">
-          <BiSolidQuoteAltLeft />
+        <div className="bg-neutral-950 p-5 rounded-lg">
           <p className="font-light italic text-xl p-3">
             "King <span className="font-normal not-italic"> 👑"</span>
           </p>

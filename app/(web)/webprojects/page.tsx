@@ -6,7 +6,7 @@ interface Project {
   title: string;
   description: string;
   github: string;
-  mediaUrl: string;
+  media: string;
 }
 
 async function getProjects() {
@@ -16,14 +16,13 @@ async function getProjects() {
 
   const { data, error } = await supabase
     .from("projects")
-    .select("*")
+    .select("media, title, description, github")
     .eq("type", "Web");
 
   if (error) {
     console.error("Error fetching projects:", error.message);
     return [];
   }
-
   return data as Project[];
 }
 
@@ -34,14 +33,14 @@ export default async function WebProjects() {
     <div>
       <NavBar />
       <section className="h-screen flex-col justify-center h-screen ml-6 mb-2 p-8">
-        <h1 className="text-5xl font-medium mb-5 text-left ml-5 tracking-tight">
+        <h1 className="mt-16 text-5xl font-medium mb-5 text-left ml-5 tracking-tight">
           My Web Dev Projects
         </h1>
         <p className="font-normal text-neutral-300 mb-5 text-left ml-6 tracking-tight">
           These are some of the projects I worked on as I embarked on my
           'Project-Based Learning' journey.
         </p>
-        <ProjectList projects={projects} pageType="webDev" />
+        <ProjectList projects={projects} />
       </section>
     </div>
   );
