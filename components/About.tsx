@@ -59,7 +59,7 @@ const AboutMe: React.FC = () => {
               />
             </div>
             <a
-              href="https://lavulopbfiogsnnczeae.supabase.co/storage/v1/object/public/photos/Resume_Anandh.pdf?t=2024-07-11T06%3A48%3A55.976Z"
+              href="https://lavulopbfiogsnnczeae.supabase.co/storage/v1/object/public/photos/Resume-Anandh.pdf"
               target="_blank"
             >
               <button className="rounded-full py-2 px-2 text-black bg-white hover:bg-neutral-700 hover:text-white">
