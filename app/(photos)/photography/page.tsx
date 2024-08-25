@@ -10,7 +10,7 @@ async function getImageUrls() {
 
   const { data, error } = await supabase.storage
     .from("photos")
-    .list("public", { limit: 20 });
+    .list("public", { limit: 25 });
 
   if (error) {
     console.error("Error fetching images:", error.message);
