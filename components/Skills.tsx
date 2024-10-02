@@ -13,12 +13,13 @@ const frameworks = [
   { name: "Next.js", logo: "https://cdn.simpleicons.org/nextdotjs/white" },
   { name: "TailwindCSS", logo: "https://cdn.simpleicons.org/tailwindcss" },
   { name: ".NET", logo: "https://cdn.simpleicons.org/dotnet" },
+  { name: "PostgreSQL", logo: "https://cdn.simpleicons.org/postgresql/4169E1" },
   { name: "PySpark", logo: "https://cdn.simpleicons.org/apachespark" },
   { name: "Kafka", logo: "/kafka.png" },
   { name: "AWS", logo: "/aws.png" },
   { name: "Supabase", logo: "https://cdn.simpleicons.org/supabase" },
   { name: "Git", logo: "https://cdn.simpleicons.org/git" },
-  { name: "Docker", logo: "https://cdn.simpleicons.org/docker" }
+  { name: "Docker", logo: "https://cdn.simpleicons.org/docker" },
 ];
 
 const containerVariants: Variants = {
