@@ -10,6 +10,7 @@ const languages = [
 
 const frameworks = [
   { name: "React", logo: "https://cdn.simpleicons.org/react" },
+  { name: "Next.js", logo: "https://cdn.simpleicons.org/nextdotjs/white" },
   { name: "TailwindCSS", logo: "https://cdn.simpleicons.org/tailwindcss" },
   { name: ".NET", logo: "https://cdn.simpleicons.org/dotnet" },
   { name: "PySpark", logo: "https://cdn.simpleicons.org/apachespark" },
@@ -17,6 +18,7 @@ const frameworks = [
   { name: "AWS", logo: "/aws.png" },
   { name: "Supabase", logo: "https://cdn.simpleicons.org/supabase" },
   { name: "Git", logo: "https://cdn.simpleicons.org/git" },
+  { name: "Docker", logo: "https://cdn.simpleicons.org/docker" }
 ];
 
 const containerVariants: Variants = {
