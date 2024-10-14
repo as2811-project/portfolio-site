@@ -18,7 +18,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="bg-neutral-950 p-5 rounded-lg">
-          <p className="font-light italic text-xl p-3">"What a legend bruv!"</p>
+          <p className="font-light italic text-xl p-3">"What a legend."</p>
           <div className="flex flex-row">
             <span className="font-light not-italic text-xs content-center indent-10">
               - Jermaine Sau, Supervisor | Woolworths Williamstown
